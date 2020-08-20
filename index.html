@@ -18,34 +18,7 @@
         <meta name="twitter:description" content="Assista o SescTV ao vivo, 24 horas por dia. Literatura, teatro, cinema, artes visuais e dança." />
         <meta name="twitter:title" content="Home - SescTV" />
         <link rel="stylesheet" href="https://use.typekit.net/dba6omz.css">
-        <link rel="stylesheet" href="css/addToHomeScreen.css">
-        <script>
-        let deferredPrompt;
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-          deferredPrompt = e;
-          showInstallPromotion();
-        });
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-          e.preventDefault();
-          deferredPrompt = e;
-          addBtn.style.display = 'block';
-
-          addBtn.addEventListener('click', (e) => {
-            addBtn.style.display = 'none';
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User accepted the A2HS prompt');
-                } else {
-                  console.log('User dismissed the A2HS prompt');
-                }
-                deferredPrompt = null;
-              });
-          });
-        });
-        </script>
+        <link rel="manifest" href="manifest.json">
 
         <script type="application/ld+json">
         {
@@ -63,13 +36,8 @@
         </script>
 
         <meta name="theme-color" content="#000000">
-
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-
         <meta name="msapplication-navbutton-color" content="#000000">
-
-        <link rel="manifest" href="manifest.json">
-
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#000000">
         <meta name="application-name" content="Arte na Escola UENF">
@@ -127,4 +95,16 @@
                 <button class="add-button">Adicione o app do SescTV à sua tela inicial!</button>
                </main>
     </body>
+<script>
+    if ('serviceWorker' in navigator)
+    {
+        console.log("Verificando o service worker:");
+        navigator.serviceWorker.register('service-worker.js')
+            .then(function(reg){
+            console.log("OK");
+        }).catch(function(err) {
+            console.log("Service worker não registra", err)
+        });
+    }
+    </script>
 </html>
