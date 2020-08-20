@@ -21,7 +21,13 @@
         <link rel="stylesheet" href="css/addToHomeScreen.css">
         <script type="text/javascript" src="js/addToHomeScreen.js"></script>
         <script>
-        addToHomescreen();
+            if (
+                (("standalone" in window.navigator) && !window.navigator.standalone)
+                ||
+                (!windows.matchMedia('(display-mode: standalone)').matches)
+            ) {
+            addToHomescreen();
+            }
         </script>
 
         <script type="application/ld+json">
