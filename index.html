@@ -19,6 +19,7 @@
         <meta name="twitter:title" content="Home - SescTV" />
         <link rel="stylesheet" href="https://use.typekit.net/dba6omz.css">
         <link rel="manifest" href="manifest.json">
+        <script type="text/javascript" src="ask.js"></script>
 
         <script type="application/ld+json">
         {
@@ -94,16 +95,4 @@
                 </div>
                </main>
     </body>
-    <script type="text/javascript">
-    if ('serviceWorker' in navigator)
-    {
-        console.log("Verificando o service worker:");
-        navigator.serviceWorker.register('service-worker.js')
-            .then(function(reg){
-            console.log("OK");
-        }).catch(function(err) {
-            console.log("Service worker não registra", err)
-        });
-    }
-    </script>
 </html>
