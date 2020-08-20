@@ -19,7 +19,6 @@
         <meta name="twitter:title" content="Home - SescTV" />
         <link rel="stylesheet" href="https://use.typekit.net/dba6omz.css">
         <link rel="manifest" href="manifest.json">
-        <script type="text/javascript" src="ask.js"></script>
 
         <script type="application/ld+json">
         {
@@ -34,6 +33,17 @@
             "https://www.youtube.com/user/SESCTV"
           ]
         }
+        </script>
+
+        <script type="text/javascript">
+            let deferredPrompt;
+
+                window.addEventListener('beforeinstallprompt', (e) => {
+                // Evitar que o Chrome 76 e versões antigas exibam a mensagem
+                e.preventDefault();
+                // Avisar ao usuário que ele pode instalar o webapp
+                btnAdd.style.display = 'block';
+            });
         </script>
 
         <meta name="theme-color" content="#000000">
