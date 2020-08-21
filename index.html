@@ -34,7 +34,12 @@
           ]
         }
         </script>
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript">
+            import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
+        </script>
 
         <meta name="theme-color" content="#000000">
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
