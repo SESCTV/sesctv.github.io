@@ -75,12 +75,6 @@
                 margin: 0;
             }
 
-        main {
-                width: 100%;
-                align-content: center;
-                align-items: center;
-            }
-
             .webapp {
                 position: relative;
                 overflow: hidden;
@@ -90,8 +84,9 @@
                 height: 100%;
                 margin: 0;
             }
+
             .install--button {
-                margin-bottom: 0;
+                bottom: 0;
                 align-content: center;
                 align-items: center;
                 text-align: center;
@@ -106,10 +101,10 @@
         </head>
 	       <body>
 		      <main>
-                  <pwa-install class="install--button"><br />Clique aqui e instale o app do<br />SescTV no seu celular!<br /><br /></pwa-install>
                 <div class="webapp">
                  <iframe src="https://sesctv.org.br/" style="border: 0; width: 100vw; height: 100vh">Seu navegador não suporta esta tecnologia. Por favor, atualize seu navegador: <a href="https://www.mozilla.org/pt-BR/" target="_blank">Mozilla Firefox</a></iframe>
                   </div>
+                  <pwa-install class="install--button">Clique aqui e instale o app do<br />SescTV no seu celular!</pwa-install>
                </main>
                <script>
                   if ("serviceWorker" in navigator) {
