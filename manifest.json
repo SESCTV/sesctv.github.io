@@ -1,7 +1,7 @@
 {
   "name": "SescTV",
   "short_name": "SescTV",
-  "description": null,
+  "description": "O SescTV é o canal cultural do Sesc que enxerga a ideia de televisão não apenas como um veículo, mas como uma manifestação da arte audiovisual.",
   "dir": "ltr",
   "lang": "pt-BR",
   "display": "standalone",
