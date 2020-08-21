@@ -1,22 +1,5 @@
 // sw.js
 
-const swPrecache = {
-  staticFileGlobs: [
-    'https://use.typekit.net/dba6omz.css',
-    'index.html',
-    '*.css',
-    '*.js',
-    '*.json',
-    '1x/android/*',
-    '1x/apple/*',
-  ],
-  root: '/',
-  stripPrefix: '/',
-  directoryIndex: 'index.html',
-  navigateFallback: 'index.html',
-  runtimeCaching: [],
-}
-
 module.exports = swPrecache
 
 var cacheName = 'sesctv-github-io-cache';
