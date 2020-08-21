@@ -35,7 +35,7 @@
         }
         </script>
 
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 
         <meta name="theme-color" content="#000000">
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
@@ -81,10 +81,12 @@
                 height: 100%;
             }
 
-            .add-button {
-                position: absolute;
-                top: 1px;
-                left: 1px;
+            .sesctv-pwa {
+                position: relative;
+                width: 100%;
+                bottom: 0;
+                background-color: #fff;
+                color: #000;
             }
 
         </style>
@@ -93,7 +95,14 @@
 		      <main>
                 <div class="webapp">
                  <iframe src="https://sesctv.org.br/" style="border: 0; width: 100vw; height: 100vh">Seu navegador não suporta esta tecnologia. Por favor, atualize seu navegador: <a href="https://www.mozilla.org/pt-BR/" target="_blank">Mozilla Firefox</a></iframe>
+                <pwa-install class="sesctv--pwa">Clique aqui e instale o app do SescTV no seu celular</pwa-install>
                 </div>
                </main>
+               <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+               <script>
+                  if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.register("/service-worker.js");
+                  }
+                </script>
     </body>
 </html>
