@@ -94,7 +94,13 @@
 		      <main>
                 <div class="webapp">
                  <iframe src="https://sesctv.org.br/" style="border: 0; width: 100vw; height: 100vh">Seu navegador não suporta esta tecnologia. Por favor, atualize seu navegador: <a href="https://www.mozilla.org/pt-BR/" target="_blank">Mozilla Firefox</a></iframe>
+                    <pwa-install>Install</pwa-install>
                 </div>
                </main>
+               <script>
+                  if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.register("/service-worker.js");
+                  }
+    </script>
         </body>
 </html>
